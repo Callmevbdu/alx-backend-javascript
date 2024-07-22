@@ -1,6 +1,9 @@
-// A function named displayMessage that prints in STDOUT the string argument.
-function displayMessage(message) {
-  process.stdout.write(message + '\n');
-}
+/**
+ * A function named displayMessage that prints in STDOUT the string argument
+ */
+
+const displayMessage = (message) => {
+  console.log(message);
+};
 
 module.exports = displayMessage;
