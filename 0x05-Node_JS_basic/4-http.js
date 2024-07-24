@@ -5,12 +5,9 @@ const HOST = 'localhost';
 const app = http.createServer()
 
 /**
- * Create a small HTTP server using the http module:
- * 	- It should be assigned to the variable app and this one must be
- * 	exported
- * 	- HTTP server should listen on port 1245
- * 	- Displays Hello Holberton School! in the page body for any endpoint
- * 	as plain text
+ * Handles incoming HTTP requests.
+ * @param {http.IncomingMessage} req - The request object.
+ * @param {http.ServerResponse} res - The response object.
  */
 app.on('request', (_, res) => {
     const responseText = 'Hello Holberton School!';
