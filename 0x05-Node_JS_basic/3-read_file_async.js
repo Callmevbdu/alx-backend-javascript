@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 /**
  * Using the database database.csv (provided in project description), create a
  * function countStudents in the file 3-read_file_async.js
