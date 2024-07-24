@@ -1,3 +1,8 @@
+const http = require('http');
+const PORT = 1245;
+const HOST = 'localhost';
+const app = http.createServer()
+
 /**
  * Create a small HTTP server using the http module:
  *      - It should be assigned to the variable app and this one must be
@@ -6,11 +11,6 @@
  *      - Displays Hello Holberton School! in the page body for any endpoint
  *      as plain text
  */
-const http = require('http');
-const PORT = 1245;
-const HOST = 'localhost';
-const app = http.createServer()
-
 app.on('request', (_, res) => {
     const responseText = 'Hello Holberton School!';
 
