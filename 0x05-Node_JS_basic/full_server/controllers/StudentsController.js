@@ -6,9 +6,8 @@ import readDatabase from '../utils';
 const VALID_MAJORS = ['CS', 'SWE'];
 
 /**
- * A class named StudentsController. Adding two static methods:
- * 	- The first one is getAllStudents:
- * 	- The second one is getAllStudentsByMajor:
+ * A class named StudentsController. Adding two static methods: The first one
+ * is getAllStudents, the second one is getAllStudentsByMajor.
  */
 class StudentsController {
   static getAllStudents(request, response) {
