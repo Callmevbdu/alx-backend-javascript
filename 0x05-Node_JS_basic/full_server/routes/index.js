@@ -2,9 +2,8 @@ import AppController from '../controllers/AppController';
 import StudentsController from '../controllers/StudentsController';
 
 /**
- * Index.js file:
- * 	Links the route / to the AppController
- * 	Link the route /students and /students/:majorto the StudentsController
+ * Index.js file: Links the route / to the AppController, the route /students
+ * and /students/:major to the StudentsController
  * @param {Express} app - Express app.
  */
 const mapRoutes = (app) => {
