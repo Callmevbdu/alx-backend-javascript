@@ -6,10 +6,10 @@ const app = http.createServer()
 
 /**
  * Handles incoming HTTP requests.
- * @param {http.IncomingMessage} _ - The request object.
+ * @param {http.IncomingMessage} req - The request object.
  * @param {http.ServerResponse} res - The response object.
  */
-app.on('request', (_, res) => {
+app.on('request', (req, res) => {
     const responseText = 'Hello Holberton School!';
 
     res.setHeader('Content-Type', 'text/plain');
