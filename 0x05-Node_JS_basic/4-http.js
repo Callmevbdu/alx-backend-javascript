@@ -6,6 +6,7 @@ const app = http.createServer()
 
 /**
  * Handles incoming HTTP requests.
+ * @param {http.IncomingMessage} req - The request object.
  * @param {http.ServerResponse} res - The response object.
  */
 app.on('request', (_, res) => {
@@ -17,6 +18,9 @@ app.on('request', (_, res) => {
     res.write(Buffer.from(responseText));
 });
 
+/**
+ * Starts the HTTP server.
+ */
 app.listen(PORT, HOST, () => {
     process.stdout.write(`Server listening at -> http://${HOST}:${PORT}\n`);
 });
