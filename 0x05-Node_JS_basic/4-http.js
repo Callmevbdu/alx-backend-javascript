@@ -2,7 +2,7 @@ const http = require('http');
 
 const PORT = 1245;
 const HOST = 'localhost';
-const app = http.createServer()
+const app = http.createServer();
 
 /**
  * Handles incoming HTTP requests.
