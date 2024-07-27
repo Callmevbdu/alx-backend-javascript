@@ -47,4 +47,11 @@ describe('Cart page', () => {
       done();
     });
   });
+
+  it('should return status code 404 for non-numeric :id', (done) => {
+    request.get(`${apiUrl}/cart/nonnumeric`, (error, response, body) => {
+      expect(response.statusCode).to.equal(404);
+      done();
+    });
+  });
 });
