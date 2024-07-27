@@ -17,5 +17,12 @@ describe('Index page', () => {
       done();
     });
   });
+
+  it('should handle errors gracefully', (done) => {
+    request.get(`${apiUrl}/error`, (error, response, body) => {
+      expect(body).to.include('Error');
+      done();
+    });
+  });
 });
 
