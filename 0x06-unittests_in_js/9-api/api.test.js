@@ -48,9 +48,16 @@ describe('Cart page', () => {
     });
   });
 
-  it('should return status code 404 for non-numeric :id', (done) => {
-    request.get(`${apiUrl}/cart/nonnumeric`, (error, response, body) => {
-      expect(response.statusCode).to.equal(404);
+  it('GET /cart/:id returns 404 response for negative number values in :id', (done) => {
+    request.get(`${apiUrl}/cart/-47`, (_err, res, _body) => {
+      expect(res.statusCode).to.be.equal(404);
+      done();
+    });
+  });
+
+  it('GET /cart/:id returns 404 response for non-numeric values in :id', (done) => {
+    request.get(`${apiUrl}/cart/d200-44a5-9de6`, (_err, res, _body) => {
+      expect(res.statusCode).to.be.equal(404);
       done();
     });
   });
